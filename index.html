@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<!--
+  WELCOME TO THE PENDULUM SIMULATION BY VIJAY MAHESWARAN.  THIS IS THE HTML THAT DISPLAYS PENDULUM WITH A CLOCK AND A METHOD TO CHANGE GRAVITY. WHEN GRAVITY CHANGES, IT AFFECTS THE SPEED AT WHICH PENDULUM SWINGS.
+THIS HTML FILE WORKS ONLY WITH THE .JS FILE AND THE .CSS FILE
+-->
+  
+<head>
+  <!--
+    THE HEAD  SECTION OF HTML INCLUDES ALL THE JAVASCRIPT LIBRARIES NEEDED TO CREATE THE PENDULUM DISPLAY
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
+</head>
+
+  
+<body>
+  <!--
+  THIS IS THE HTML BODY SECTION WHICH INCLUDES THE VARIOUS HTML DISPLAY ITEMS SUCH AS BUTTON, CLOCK, SLIDER, AND THE PENDULUM WHICH IS A LINE AND A CIRCLE
+  -->
+  
+  <div id="js_timer">
+    <!-- this is the code for the timer -->
+  <div id="timer">
+    00:00
+  </div>
+    
+  <div>
+    <!-- this is the code for the pause/start button -->
+  <button id="btn" onclick="startstop()">pause</button>
+  </div>
+</div>
+
+  <div>
+    <!-- this is the code for the gravity range slider min value is 5 and max value is 15. We can alter min and max values below -->
+    <input type="range" id="gravity" name="gravity"
+         min="5" max="15" value="10" oninput="changeGravity()" onchange=""show_value(this.value);">
+    <label for="gravity" id="lbl">gravity</label>
+</div>
+
+  <!-- THE FOLLOWING LINES INCLUDE ADDITIONAL JAVASCRIPT CODE -->
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+   <script src="sketch.js"></script>
+</body>
+
+</html>
+
+
+
